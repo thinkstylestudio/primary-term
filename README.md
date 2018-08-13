@@ -1,4 +1,4 @@
-Primary Term
+WIP: Primary Term
 =================
 
 A WordPress plugin that allows a user to set a primary category.
