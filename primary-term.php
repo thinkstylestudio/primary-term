@@ -13,10 +13,10 @@ opcache_reset();
 
 // If this file is accessed directory, then abort.
 
-if ( ! defined('WPINC')) {
-    die;
+if ( ! defined( 'WPINC' ) ) {
+	die;
 }
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 const PLUGIN_DIRECTORY_NAME = 'primary-term';
 const PRIMARY_TERM          = 'primary_term';

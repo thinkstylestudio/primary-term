@@ -7,13 +7,12 @@
  * @param string $text
  * @param string $label
  */
-function prd($text = '', $label = '')
-{
-    echo '<pre>', "\n";
-    echo '==', $label, '==', "\n";
-    print_r($text);
-    echo "\n", '</pre>', "\n\n";
-    exit;
+function prd( $text = '', $label = '' ) {
+	echo '<pre>', "\n";
+	echo '==', $label, '==', "\n";
+	print_r( $text );
+	echo "\n", '</pre>', "\n\n";
+	exit;
 }
 
 /**
@@ -23,12 +22,11 @@ function prd($text = '', $label = '')
  * @param string $text
  * @param string $label
  */
-function pr($text, $label = '')
-{
-    echo '<pre>', "\n";
-    echo '==', $label, '==', "\n";
-    print_r($text);
-    echo "\n", '</pre>', "\n\n";
+function pr( $text, $label = '' ) {
+	echo '<pre>', "\n";
+	echo '==', $label, '==', "\n";
+	print_r( $text );
+	echo "\n", '</pre>', "\n\n";
 }
 
 /**
@@ -37,17 +35,16 @@ function pr($text, $label = '')
  *
  * @param  ...
  */
-function pra()
-{
-    $args = func_get_args();
+function pra() {
+	$args = func_get_args();
 
-    if (_is_array($args)) {
-        $counter = 1;
-        foreach ($args as $val) {
-            pr($val, $counter);
-            $counter++;
-        }
-    }
+	if ( _is_array( $args ) ) {
+		$counter = 1;
+		foreach ( $args as $val ) {
+			pr( $val, $counter );
+			$counter ++;
+		}
+	}
 
 }
 
@@ -57,18 +54,17 @@ function pra()
  *
  * @param  ...
  */
-function prad()
-{
-    $args = func_get_args();
+function prad() {
+	$args = func_get_args();
 
-    if (_is_array($args)) {
-        $counter = 1;
-        foreach ($args as $val) {
-            pr($val, $counter);
-            $counter++;
-        }
-    }
-    exit;
+	if ( _is_array( $args ) ) {
+		$counter = 1;
+		foreach ( $args as $val ) {
+			pr( $val, $counter );
+			$counter ++;
+		}
+	}
+	exit;
 }
 
 /**
@@ -78,12 +74,11 @@ function prad()
  * @param string $text
  * @param string $label
  */
-function vd($text, $label = '')
-{
-    echo '<pre>', "\n";
-    echo '==', $label, '==', "\n";
-    var_dump($text);
-    echo "\n", '</pre>', "\n\n";
+function vd( $text, $label = '' ) {
+	echo '<pre>', "\n";
+	echo '==', $label, '==', "\n";
+	var_dump( $text );
+	echo "\n", '</pre>', "\n\n";
 }
 
 /**
@@ -93,13 +88,12 @@ function vd($text, $label = '')
  * @param string $text
  * @param string $label
  */
-function vdd($text, $label = '')
-{
-    echo '<pre>', "\n";
-    echo '==', $label, '==', "\n";
-    var_dump($text);
-    echo "\n", '</pre>', "\n\n";
-    exit;
+function vdd( $text, $label = '' ) {
+	echo '<pre>', "\n";
+	echo '==', $label, '==', "\n";
+	var_dump( $text );
+	echo "\n", '</pre>', "\n\n";
+	exit;
 }
 
 /**
@@ -109,12 +103,11 @@ function vdd($text, $label = '')
  * @param mixed  $data
  * @param string $label
  */
-function logg($data, $label = '')
-{
-    $file = '/Users/soubhik/Documents/tmp/my-errors.log';
-    error_log('========'.$label.'========'."\n", 3, $file);
-    error_log(json_encode($data)."\n", 3, $file);
-    error_log('========'.$label.'========'."\n\n", 3, $file);
+function logg( $data, $label = '' ) {
+	$file = '/Users/soubhik/Documents/tmp/my-errors.log';
+	error_log( '========' . $label . '========' . "\n", 3, $file );
+	error_log( json_encode( $data ) . "\n", 3, $file );
+	error_log( '========' . $label . '========' . "\n\n", 3, $file );
 }
 
 /**
@@ -124,17 +117,16 @@ function logg($data, $label = '')
  *
  * @return string
  */
-function pt($data)
-{
-    if (is_object($data)) {
-        echo get_class($data);
-    } elseif (is_bool($data)) {
-        var_dump($data);
-    } elseif (is_array($data)) {
-        pr($data);
-    } else {
-        echo $data.' ['.gettype($data).']';
-    }
+function pt( $data ) {
+	if ( is_object( $data ) ) {
+		echo get_class( $data );
+	} elseif ( is_bool( $data ) ) {
+		var_dump( $data );
+	} elseif ( is_array( $data ) ) {
+		pr( $data );
+	} else {
+		echo $data . ' [' . gettype( $data ) . ']';
+	}
 }
 
 /**
@@ -144,17 +136,16 @@ function pt($data)
  *
  * @return string
  */
-function ptd($data)
-{
-    if (is_object($data)) {
-        echo get_class($data);
-    } elseif (is_bool($data)) {
-        var_dump($data);
-    } elseif (is_array($data)) {
-        pr($data);
-    } else {
-        echo $data.' ['.gettype($data).']';
-    }
+function ptd( $data ) {
+	if ( is_object( $data ) ) {
+		echo get_class( $data );
+	} elseif ( is_bool( $data ) ) {
+		var_dump( $data );
+	} elseif ( is_array( $data ) ) {
+		pr( $data );
+	} else {
+		echo $data . ' [' . gettype( $data ) . ']';
+	}
 
-    exit(0);
+	exit( 0 );
 }
