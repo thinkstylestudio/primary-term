@@ -1,6 +1,6 @@
 <?php
 
-namespace Tenup\Frontend;
+namespace Thnk\Frontend;
 
 use WP_Error;
 use WP_Post;

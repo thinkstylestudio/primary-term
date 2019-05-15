@@ -1,6 +1,6 @@
 <?php
 
-namespace Tenup\Admin;
+namespace Thnk\Admin;
 
 use WP_Post;
 
@@ -38,14 +38,14 @@ class PrimaryTerm {
 
 		?>
         <p>
-            <label for="<?php echo PRIMARY_TERM ?>"><?php esc_attr_e( 'Primary Category Term:', 'tenup' ); ?></label>
+            <label for="<?php echo PRIMARY_TERM ?>"><?php esc_attr_e( 'Primary Category Term:', 'thnk' ); ?></label>
             <select id="<?php echo PRIMARY_TERM ?>" name="<?php echo PRIMARY_TERM ?>">
-                <option value=""><?php esc_html_e( '&ndash; Select  &ndash;', 'tenup' ); ?></option>
+                <option value=""><?php esc_html_e( '&ndash; Select  &ndash;', 'thnk' ); ?></option>
 	            <?php foreach ( $categories as $selectItem ) { ?>
                     <option
                             value="<?php echo esc_attr( $selectItem->term_id ); ?>" <?php selected( $location,
 	                    $selectItem->term_id, true ); ?>>
-	                    <?php esc_html_e( $selectItem->name, 'tenup' ); ?>
+	                    <?php esc_html_e( $selectItem->name, 'thnk' ); ?>
                     </option>
 	            <?php } ?>
 

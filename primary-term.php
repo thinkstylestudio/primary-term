@@ -32,8 +32,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 const PLUGIN_DIRECTORY_NAME = 'primary-term';
 const PRIMARY_TERM          = 'primary_term';
 
-$frontend = new \Tenup\Frontend\PrimaryTerm();
+$frontend = new \Thnk\Frontend\PrimaryTerm();
 $frontend->init();
 
-$admin = new \Tenup\Admin\PrimaryTerm();
+$admin = new \Thnk\Admin\PrimaryTerm();
 $admin->init();
